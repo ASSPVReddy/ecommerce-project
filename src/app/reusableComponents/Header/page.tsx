@@ -19,16 +19,24 @@ export default function Header(){
             </div>
             <div className="px-4 lg:px-6 py-2.5">
                 <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <div className="flex items-center lg:order-2 pl-10">
-                    <a href="#"><h1 className="font-weight-semi-bold"><span className="text-red-300 font-bold border border-grey-300 p-4">E</span> Shopper</h1></a>
+                    <div className="flex items-center lg:order-2 pl-10 pt-2">
+                        <a href="#"><h1 className="text-4xl font-bold"><span className="text-red-300 font-bold border border-grey-300 px-4 py-2">E</span> Shopper</h1></a>
                     </div>
-                    <div className="flex items-center lg:order-2">
-                        <input type="text" className="form-control border border-grey border-[1px] pl-10 pr-4 py-2" placeholder="Search for products" />
-                        <i className="fa-solid fa-magnifying-glass border border-grey-300 py-3 px-5 text-red-300"></i>
+                    <div className="flex items-center lg:order-2 w-5/12">
+                        <div className="w-full">
+                            <input type="text" className="form-control border border-grey border-[1px] pl-1 pr-4 py-2 w-full" placeholder="Search for products" />
+                        </div>
+                        <div>
+                            <i className="fa-solid fa-magnifying-glass border border-grey-300 py-3 px-3 text-red-300"></i>
+                        </div>
                     </div>
                     <div className="flex items-center lg:order-2 pr-20">
-                        <a href="#"><i className="fa-solid fa-heart px-5 text-red-300 border border-grey-300 py-3"></i></a>
-                        <a href="#"><i className="fa-solid fa-cart-shopping px-5 text-red-300 border border-grey-300 py-3"></i></a>
+                        <div className="border border-grey-300 m-2">
+                            <a href="#"><i className="fa-solid fa-heart text-red-300  p-3"></i><span className="pr-2">0</span></a>
+                        </div>
+                        <div className="border border-grey-300">
+                            <a href="#"><i className="fa-solid fa-cart-shopping text-red-300 p-3"></i><span className="pr-2">0</span></a>
+                        </div>
                     </div>
                 </div>
             </div>
