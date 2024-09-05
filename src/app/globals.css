@@ -16,7 +16,13 @@
   }
 }
 
+<<<<<<< HEAD
 
+=======
+body{
+  font-family: "Poppins", sans-serif;
+}
+>>>>>>> d9e9dbe8ea37c1f5cbf1ff6bdd74300e3a8e2e68
 
 @layer utilities {
   .text-balance {
