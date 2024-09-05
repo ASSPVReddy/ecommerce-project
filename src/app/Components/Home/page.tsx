@@ -1,7 +1,9 @@
+import SideNav from "@/app/reusableComponents/SideNav/page";
+
 export default function Home(){
     return(
         <div>
-    <h1>hello </h1>
+           <SideNav />
     </div>
     )
 }
