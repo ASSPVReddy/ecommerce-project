@@ -1,7 +1,7 @@
 // @ts-ignore
 const ServiceCard =({service,icon})=> {
     return (
-        <div className="w-64 h-24 bg-slate-100 border-2 flex justify-center items-center m-4">
+        <div className="w-3/12 h-24 border flex justify-center items-center m-4">
            <div className="text-red-300 text-4xl p-3">
             <i className={icon}></i>  
            </div> 
