@@ -1,4 +1,3 @@
-"use client";
 import { useState } from 'react';
 import CartItems from "@/app/reusableComponents/CardComponents/CartItems";
 import cartproductsData from "../../../../public/cartproducts.json";
