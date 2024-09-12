@@ -1,0 +1,26 @@
+[
+  {
+    "productname": "Colorful Stylish Shirt1",
+    "id": 1,
+    "price": 150,
+    "quantity": 2,
+    "total": 300,
+    "image": "../img/product-1.jpg"
+  },
+  {
+    "productname": "Colorful Stylish Shirt2",
+    "id": 2,
+    "price": 100,
+    "quantity": 1,
+    "total": 100,
+    "image": "../img/product-2.jpg"
+  },
+  {
+    "productname": "Colorful Stylish Shirt3",
+    "id": 3,
+    "price": 100,
+    "quantity": 3,
+    "total": 300,
+    "image": "../img/product-3.jpg"
+  }
+]
