@@ -1,13 +1,11 @@
-import { PageNav } from "@/app/ReusableComponents/Pagenav/page";
 import Image from "../../../../node_modules/next/image";
 import carousel1 from "../../../../public/img/carousel1.jpg"
-export default function HomeNavigation() {
+export default function Homecarousel() {
     return (
         <header className="py-5">
-           <PageNav />
             <div className='relative'>
-                <div className=" z-0 w-full h-full">
-                <Image src={carousel1} alt="hello" className="w-full h-1/2"/>
+                <div className="z-0 w-full" >
+                <Image src={carousel1} alt="hello" className="w-full h-96" />
                 </div>
                 <div className="z-10 w-full absolute text-white text-center top-1/2">
                     <h4 className='text-2xl uppercase font-medium pb-5'>10% Off Your First Order</h4>

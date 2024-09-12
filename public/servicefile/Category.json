@@ -1,0 +1,31 @@
+[{
+    "name":"Men's Dresses",
+    "imagepath":"./img/cat1.jpg",
+    "numberofProducts":" 80 products"
+},
+{
+    "name":"Women's Dresses",
+    "imagepath":"../img/cat2.jpg",
+    "numberofProducts":" 50 products"
+},
+{
+    "name":"Kid's Dresses",
+    "imagepath":"./img/cat3.jpg",
+    "numberofProducts":" 20 products"
+},
+{
+    "name":"Accessories",
+    "imagepath":"./img/cat4.jpg",
+    "numberofProducts":" 10 products"
+},
+{
+    "name":"Bags",
+    "imagepath":"./img/cat5.jpg",
+    "numberofProducts":" 30 products"
+},
+{
+    "name":"Shoes",
+    "imagepath":"./img/cat6.jpg",
+    "numberofProducts":" 40 products"
+}
+]

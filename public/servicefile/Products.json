@@ -1,0 +1,49 @@
+[{
+    "producttitle":"Ladies Top",
+    "imagepath":"../img/product1.jpg",
+    "price":"199",
+    "discount":"50"
+},
+{
+    "producttitle":" Kids Denim Jacket",
+    "imagepath":"../img/product2.jpg",
+    "price":"799",
+    "discount":"150"
+},
+{
+    "producttitle":"Sweater for men",
+    "imagepath":"../img/product3.jpg",
+    "price":"399",
+    "discount":"250"
+},
+{
+    "producttitle":"Women's Black Top",
+    "imagepath":"../img/product4.jpg",
+    "price":"599",
+    "discount":"60"
+},
+{
+    "producttitle":"girls top",
+    "imagepath":"../img/product5.jpg",
+    "price":" 299",
+    "discount":"80"
+},
+{
+    "producttitle":"blazers for men",
+    "imagepath":"../img/product6.jpg",
+    "price":" 599",
+    "discount":"150"
+},
+{
+    "producttitle":"Long Coat for Women",
+    "imagepath":"../img/product7.jpg",
+    "price":" 599",
+    "discount":"150"
+},
+{
+    "producttitle":"Boys shirt",
+    "imagepath":"../img/product8.jpg",
+    "price":" 199",
+    "discount":"50"
+}
+]
