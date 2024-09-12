@@ -75,36 +75,36 @@ export default function CheckOut() {
                                 </div>
                             </div>
                         </div>
-                        <div className="border border-gray-200 mb-5 ml-8 w-1/4">
+                        <div className="border border-gray-200 mb-5 ml-8 w-1/4 h-96">
                             <div className="bg-indigo-50 w-full px-4 py-3">
                                 <h4 className="font-bold text-2xl">Order Total</h4>
                             </div>
                             <div className="pt-2">
-                                <h1 className="mb-6 ml-6 text-2xl font-semibold">Products</h1>
+                                <h1 className="mb-3 ml-6 text-2xl font-semibold">Products</h1>
 
-                                <div className="flex justify-between font-medium mb-6 px-5">
+                                <div className="flex justify-between font-medium mb-3 px-5">
                                     <h6>Colorful Stylish Shirt 1</h6>
                                     <h6>$150</h6>
                                 </div>
-                                <div className="flex justify-between font-medium mb-6 px-5">
+                                <div className="flex justify-between font-medium mb-3 px-5">
                                     <h6>Colorful Stylish Shirt 2</h6>
                                     <h6>$150</h6>
                                 </div>
-                                <div className="flex justify-between font-medium mb-6 px-5">
+                                <div className="flex justify-between font-medium mb-3 px-5">
                                     <h6>Colorful Stylish Shirt 3</h6>
                                     <h6>$150</h6>
                                 </div>
                                 <div className="border-t py-2 px-5 mr-2">
-                                    <div className="flex justify-between font-medium mb-6 px-5">
+                                    <div className="flex justify-between font-medium mb-3 px-5">
                                         <h6>Subtotal</h6>
                                         <h6>$150</h6>
                                     </div>
-                                    <div className="flex justify-between font-medium mb-6 px-5">
+                                    <div className="flex justify-between font-medium mb-3 px-5">
                                         <h6>Shipping</h6>
                                         <h6>$10</h6>
                                     </div>
                                     <div className="border-t py-2 px-5">
-                                        <div className="flex justify-between font-extrabold text-xl mb-2">
+                                        <div className="flex justify-between font-extrabold text-xl mb-3">
                                             <h5>Total</h5>
                                             <h5>$160</h5>
                                         </div>
@@ -116,7 +116,7 @@ export default function CheckOut() {
 
                     </div>
                 </form>
-                <div className="border border-gray-200 mb-5 float-right w-1/4 mr-12">
+                <div className="border border-gray-200 mb-3 float-right w-1/4 mr-12">
                     <div className="bg-indigo-50 w-full px-4 py-3">
                         <h4 className="font-bold text-2xl">Payment</h4>
                     </div>
