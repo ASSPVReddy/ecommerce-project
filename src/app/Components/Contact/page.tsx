@@ -1,11 +1,14 @@
+import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard"
+import Header from "@/app/ReusableComponents/Header/page"
+import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page"
+
 export default function Contact() {
     return (
 
         <div>
-            <div className=" bg-indigo-50 border-2ws text-center w-full h-72  pt-24">
-                <h1 className="text-4xl font-semibold">CONTACT US</h1>
-                <p className="pt-6"><span className="text-red-300">Home</span> - Contact</p>
-            </div>
+            <Header />
+            <PageNavbar   />
+            <PageTitleCard Title={"CONTACT US"} SubTitle="Contact"/>
             <div>
                 <h1 className="text-center text-4xl font-bold pt-20">- Contact For Any Queries -</h1>
             </div>

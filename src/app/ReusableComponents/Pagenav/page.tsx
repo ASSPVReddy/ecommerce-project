@@ -2,12 +2,12 @@ export function PageNav(){
    return(
      <nav className="container w-full h- flex justify-between h-16 items-center ">
                 <div className='z-10'>
-                    <ul className="flex space-x-6 pl-8">
+                    <ul className="flex space-x-6 pl-3">
                         <li>
-                            <a href="/" className="hover:text-red-300">Home</a>
+                            <a href="../WebApp" className="hover:text-red-300 focus:text-red-300">Home</a>
                         </li>
                         <li>
-                            <a href="/shop" className="hover:text-red-300">Shop</a>
+                            <a href="../Components/Shop" className="hover:text-red-300">Shop</a>
                         </li>
                         <li>
                             <a href="/shop_detail" className="hover:text-red-300">Shop Detail</a>
@@ -24,12 +24,12 @@ export function PageNav(){
                             </ul>
                         </li>
                         <li>
-                            <a href="/contact" className="hover:text-red-300">Contact</a>
+                            <a href="../Components/Contact" className="hover:text-red-300 active:text-red-300 focus:text-red-300">Contact</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <ul className="flex space-x-6 pr-8">
+                    <ul className="flex space-x-6 pr-3">
                         <li>
                             <a href="/login" className="hover:text-red-300">Login</a>
                         </li>

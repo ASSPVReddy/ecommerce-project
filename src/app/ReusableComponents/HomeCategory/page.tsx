@@ -11,7 +11,7 @@ const Homecard=({
             <div className="w-full m-4 border p-5">
             <h1 className="text-right  mr-5 text-base font-normal">{productCount} </h1>
             <div className="w-full h-full ">
-                    <Image src={imagepath} alt="pic" className="w-full h-full transform transition duration-500 hover:scale-125"></Image>
+                    <img src={imagepath} alt="pic" className="w-full h-full transform transition duration-500 hover:scale-110"></img>
             </div>
              <h3 className="text-left ml-5 text-lg  font-semibold">{category}</h3>
         </div>

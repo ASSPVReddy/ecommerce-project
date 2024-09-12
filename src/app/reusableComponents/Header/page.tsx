@@ -1,7 +1,7 @@
 export default function Header(){
     return(
         <div className="container bg-white ">
-                <div className="flex  justify-between px-0  py-2.5 bg-indigo-50  w-full ">
+                <div className="flex  justify-between px-16  py-2.5 bg-indigo-50  w-full ">
                     <div className="lg:order-2 ">
                         <a href="#" className="hover:underline">FAQs</a><span className="px-2">|</span>
                         <a href="#" className="hover:underline">Help</a><span className="px-2">|</span>  
@@ -15,10 +15,10 @@ export default function Header(){
                         <a href="#"><i className="fa-brands fa-youtube px-2"></i></a>
                     </div>
                 </div>
-            <div className="px-0 py-2.5 bg-white">
+            <div className=" py-2.5 bg-white px-16 ">
                 <div className="flex flex-wrap justify-between items-center ">
                 <div className="flex items-center lg:order-2  pt-2">
-                        <a href="#"><h1 className="text-4xl font-bold"><span className="text-red-300 font-bold border border-grey-300 px-4 py-2">E</span> Shopper</h1></a>
+                        <a href="#"><h1 className="text-4xl font-semibold"><span className="text-red-300 font-bold border border-grey-300 px-4 py-2">E</span> Shopper</h1></a>
                     </div>
                     <div className="flex items-center lg:order-2 w-5/12">
                         <div className="w-full">
