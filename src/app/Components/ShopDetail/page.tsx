@@ -1,13 +1,16 @@
+import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard";
+import Footer from "@/app/ReusableComponents/Footer/page";
+import Header from "@/app/ReusableComponents/Header/page";
+import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page";
 import Image from "../../../../node_modules/next/image";
 import offer1 from "../../../../public/img/offer1.png"
 
 export default function ShopDetails() {
     return (
         <div>
-            <div className=" bg-indigo-50 border-2ws text-center w-full h-72  pt-24">
-                <h1 className="text-4xl font-semibold">SHOP DETAIL</h1>
-                <p className="pt-6"><span className="text-red-300">Home</span> - Shop Detail</p>
-            </div>
+            <Header />
+            <PageNavbar />
+            <PageTitleCard Title={"SHOP DETAILS"} SubTitle="Shop Details" />
             <div className="flex-justify-center">
                 <div className="w-1/2"></div>
                 <div className="w-1/2 float-right pt-8 mr-14">
@@ -96,22 +99,23 @@ export default function ShopDetails() {
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
             </div>
             <div >
-                    <Image src={offer1} alt="image"className="pt-8 ml-14"></Image>
-                </div>
-                 <div className="w-full flex justify-center space-x-20 pt-8">
-                        <h1 className=" hover:border border-b-0">Description</h1>
-                        <h1 className="ml-8 text-red-300 border">Information</h1>
-                        <h1 className="ml-8 text-red-300 border">Reviews(0)</h1>
-                    </div>
-                <div className="ml-14 mr-14 p-6 border">
-                    <h1 className="text-2xl font-semibold "> Product Description </h1>
-                    <p className="pt-4">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
-                    <p className="pt-4">Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
-                </div>
+                <Image src={offer1} alt="image" className="pt-8 ml-14"></Image>
+            </div>
+            <div className="w-full flex justify-center space-x-20 pt-8">
+                <h1 className=" hover:border border-b-0">Description</h1>
+                <h1 className="ml-8 text-red-300 border">Information</h1>
+                <h1 className="ml-8 text-red-300 border">Reviews(0)</h1>
+            </div>
+            <div className="ml-14 mr-14 p-6 border">
+                <h1 className="text-2xl font-semibold "> Product Description </h1>
+                <p className="pt-4">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
+                <p className="pt-4">Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
+            </div>
+            <Footer />
         </div>
     )
 }

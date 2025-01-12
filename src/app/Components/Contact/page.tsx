@@ -1,4 +1,5 @@
 import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard"
+import Footer from "@/app/ReusableComponents/Footer/page"
 import Header from "@/app/ReusableComponents/Header/page"
 import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page"
 
@@ -92,6 +93,7 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

@@ -1,11 +1,18 @@
+"use client"
+import { useItemContext } from "@/app/contextAPI/ItemsProvider"
 import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard"
 import FilterType from "@/app/ReusableComponents/filtertype/page"
+import Footer from "@/app/ReusableComponents/Footer/page"
 import Header from "@/app/ReusableComponents/Header/page"
 import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page"
 import ProductCard from "@/app/ReusableComponents/ProductCard/page"
 import shopProducts from "../../../../public/servicefile/Products.json"
 
 const ShopPage = () => {
+    const { product, error } = useItemContext();
+    if (error) { return <div>Error fetching data: {error.message}</div>; }
+     if (!product) { return <div>Loading...</div>; }  
+    
     return (
         <div>
             <Header />
@@ -51,33 +58,18 @@ const ShopPage = () => {
                                 <i className="fa-solid fa-magnifying-glass border border-grey-300 py-3 px-3 text-red-300"></i>
                             </div>
                         </div>
-                        <div className="">
-                            <li className="relative group z-10 ">
-                                <a href="#" className="hover:text-red-300">Sort By<i className="fa-solid fa-caret-down "></i></a>
-                                <ul className="absolute mt-2 bg-white border border-gray-2  w-80 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                    <li>
-                                        <a href="#" className="block px-4 py-2 hover:bg-indigo-50">Latest</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block px-4 py-2 hover:bg-indigo-50">Popularity</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" className="block px-4 py-2 hover:bg-indigo-50">Best Rating</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </div>
                     </div>
                     <div className="flex flex-wrap">
-                        {shopProducts.map(e => {
+                        {product.map(e => {
                             return (
-                                <ProductCard imagepath={e.imagepath} title={e.producttitle} price={e.price} discount={e.discount} width="w-1/3" />
+                                <ProductCard imagepath={e.product.image} title={e.producttitle} price={e.price} discount={e.discount} width="w-1/3" />
                             )
                         })
                         }
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     )
 }

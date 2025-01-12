@@ -1,21 +1,22 @@
 import Image from "../../../../node_modules/next/image"
+import Link from "../../../../node_modules/next/link"
 import cat1 from "../../../../public/img/cat1.jpg"
 
-const Homecard=({
-    productCount,
+const Homecard = ({
     imagepath,
     category
-})=>{
+}) => {
     return (
-        <div className="container text-black w-2/6 h-1/4 box-border  flex justify-center items-center  box-border">
-            <div className="w-full m-4 border p-5">
-            <h1 className="text-right  mr-5 text-base font-normal">{productCount} </h1>
-            <div className="w-full h-full ">
-                    <img src={imagepath} alt="pic" className="w-full h-full transform transition duration-500 hover:scale-110"></img>
+        <Link href="/Products">
+        <div className=" text-black w-full h-[320px] box-border z-0 p-4 flex justify-center items-center  box-border ">
+            <div className="w-full p-3 h-full  border z-0">
+                <div className="w-full h-3/4 z-0   flex justify-center items-center">
+                    <img src={imagepath} alt="pic" className="w-full h-full transform transition duration-500 hover:scale-110 z-0 object-fit"></img>
+                </div>
+                <h3 className="text-left text-lg  font-semibold z-100 ">{category}</h3>
             </div>
-             <h3 className="text-left ml-5 text-lg  font-semibold">{category}</h3>
         </div>
-        </div>
-         )
+        </Link>
+    )
 }
 export default Homecard

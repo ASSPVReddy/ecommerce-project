@@ -7,7 +7,6 @@ const SideNav: React.FC = () => {
     const toggleMainCollapse = () => {
         setIsMainCollapsed(prevState => !prevState);
     };
-
     const toggleSubCollapse = () => {
         setIsSubCollapsed(prevState => !prevState);
     };

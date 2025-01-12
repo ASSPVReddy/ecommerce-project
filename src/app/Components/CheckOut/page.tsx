@@ -1,6 +1,14 @@
+import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard"
+import Footer from "@/app/ReusableComponents/Footer/page"
+import Header from "@/app/ReusableComponents/Header/page"
+import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page"
+
 export default function CheckOut() {
     return (
         <div>
+            <Header />
+            <PageNavbar />
+            <PageTitleCard Title={"CHECKOUT"} SubTitle={"checkout"} />
             <div>
                 <h1 className="text-2xl font-bold">Billing Address</h1>
                 <form>
@@ -149,6 +157,7 @@ export default function CheckOut() {
                     <label className="ml-2">Ship to different address</label>
                 </div>
             </div >
+            <Footer />
         </div>
     )
 }
