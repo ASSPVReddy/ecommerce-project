@@ -1,29 +1,48 @@
-import PageTitleCard from "@/app/ReusableComponents/CardComponents/PagetitleCard";
+"use client"
 import Footer from "@/app/ReusableComponents/Footer/page";
 import Header from "@/app/ReusableComponents/Header/page";
 import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page";
-import Image from "../../../../node_modules/next/image";
-import offer1 from "../../../../public/img/offer1.png"
+import { useEffect, useState } from "react";
 
-export default function ShopDetails() {
+  const ShopDetails = ({product}:any ) => {
+    let [quantity,setQuantity] =useState(1)
+    useEffect(()=>{
+        console.log(product);
+    },[product])    
+    const increment=()=>{
+        if(quantity < 10){
+            setQuantity(quantity+1)
+        }
+    }
+    const decrement=()=>{
+        if(quantity>1){
+            setQuantity(quantity-1)
+    }
+    }
     return (
         <div>
             <Header />
-            <PageNavbar />
-            <PageTitleCard Title={"SHOP DETAILS"} SubTitle="Shop Details" />
-            <div className="flex-justify-center">
-                <div className="w-1/2"></div>
-                <div className="w-1/2 float-right pt-8 mr-14">
-                    <div>
+            <PageNavbar  />
+            {/* <PageTitleCard Title={"SHOP DETAILS"} SubTitle="Shop Details" /> */}
+            <div className="container  w-full  h-[550px]">
+                <div className="flex w-full float-right pt-8  h-full justify-center">
+                    <div className="w-1/2 flex justify-center">
+                        {product && product.map((ele:any)=>{
+                            return(
+                                <img src={ele.image} alt="image" className="w-1/2 h-full" key={ele.id}></img>
+                            )
+                        })}
+                    </div>
+                    <div className="w-1/2">
                         <h1 className="text-3xl font-bold">Colorful Stylish Shirt</h1>
                         <div>
                             <div className="flex pt-4">
-                                <p className="fas fa-star text-red-300"></p>
-                                <p className="fas fa-star text-red-300"></p>
-                                <p className="fas fa-star text-red-300"></p>
-                                <p className="fas fa-star-half-alt  text-red-300"></p>
-                                <p className="far fa-star text-red-300"></p>
-                                <p className="pt-0 ml-2">(50 Reviews)</p>
+                                <i className="fas fa-star text-red-300"></i>
+                                <i className="fas fa-star text-red-300"></i>
+                                <i className="fas fa-star text-red-300"></i>
+                                <i className="fas fa-star-half-alt  text-red-300"></i>
+                                <i className="far fa-star text-red-300"></i>
+                                <i className="pt-0 ml-2">(50 Reviews)</i>
                             </div>
                             <h1 className="text-2xl font-bold pt-4">$150.00</h1>
                             <p className="pt-4">Volup erat ipsum diam elitr rebum et dolor. Est nonumy elitr erat diam stet sit clita ea. Sanc invidunt ipsum et, labore clita lorem magna lorem ut. Erat lorem duo dolor no sea nonumy. Accus labore stet, est lorem sit diam sea et justo, amet at lorem et eirmod ipsum diam et rebum kasd rebum.</p>
@@ -76,12 +95,12 @@ export default function ShopDetails() {
                         </div>
                         <div>
                             <div className="pt-8 flex">
-                                <button className="bg-red-300 border2ws w-1/12 h-9">
+                                <button className="bg-red-300 border2ws w-1/12 h-9"  onClick={()=>decrement()}>
                                     <i className="fa fa-minus hover:text-white"></i>
                                 </button>
-                                <input type="text" placeholder="1" className=" bg-indigo-50 border2ws text-center w-1/12 h-9 focus:outline-transparent"></input>
-                                <button className="bg-red-300 border2ws w-1/12 h-9">
-                                    <i className="fa fa-plus hover:text-white"></i>
+                                <input type="text" value={quantity} className=" bg-indigo-50 border2ws text-center w-1/12 h-9 focus:outline-transparent" onChange={()=>""}></input>
+                                <button className="bg-red-300 border2ws w-1/12 h-9" onClick={()=>increment()}>
+                                    <i className="fa fa-plus hover:text-white" ></i>
                                 </button>
                                 <button className="bg-red-300 border2ws w-1/5 h-9 hover:text-white ml-4">
                                     <i className="fa fa-shopping-cart mr-1"></i>
@@ -98,24 +117,23 @@ export default function ShopDetails() {
                                 <a href=""><i className="fab fa-pinterest ml-4"></i></a>
                             </div>
                         </div>
-                    </div>
-
-                </div>
+                    </div>  
+                </div>            
             </div>
-            <div >
-                <Image src={offer1} alt="image" className="pt-8 ml-14"></Image>
-            </div>
+           
             <div className="w-full flex justify-center space-x-20 pt-8">
-                <h1 className=" hover:border border-b-0">Description</h1>
-                <h1 className="ml-8 text-red-300 border">Information</h1>
-                <h1 className="ml-8 text-red-300 border">Reviews(0)</h1>
+                <button className=" hover:border border-b-0">Description</button>
+                <button className="ml-8 text-red-300 border">Information</button>
+                <button className="ml-8 text-red-300 border">Reviews(0)</button>
             </div>
             <div className="ml-14 mr-14 p-6 border">
                 <h1 className="text-2xl font-semibold "> Product Description </h1>
                 <p className="pt-4">Eos no lorem eirmod diam diam, eos elitr et gubergren diam sea. Consetetur vero aliquyam invidunt duo dolores et duo sit. Vero diam ea vero et dolore rebum, dolor rebum eirmod consetetur invidunt sed sed et, lorem duo et eos elitr, sadipscing kasd ipsum rebum diam. Dolore diam stet rebum sed tempor kasd eirmod. Takimata kasd ipsum accusam sadipscing, eos dolores sit no ut diam consetetur duo justo est, sit sanctus diam tempor aliquyam eirmod nonumy rebum dolor accusam, ipsum kasd eos consetetur at sit rebum, diam kasd invidunt tempor lorem, ipsum lorem elitr sanctus eirmod takimata dolor ea invidunt.</p>
                 <p className="pt-4">Dolore magna est eirmod sanctus dolor, amet diam et eirmod et ipsum. Amet dolore tempor consetetur sed lorem dolor sit lorem tempor. Gubergren amet amet labore sadipscing clita clita diam clita. Sea amet et sed ipsum lorem elitr et, amet et labore voluptua sit rebum. Ea erat sed et diam takimata sed justo. Magna takimata justo et amet magna et.</p>
-            </div>
+            </div>     
             <Footer />
         </div>
     )
 }
+
+export default ShopDetails

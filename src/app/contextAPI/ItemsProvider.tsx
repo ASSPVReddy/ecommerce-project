@@ -4,7 +4,7 @@ import axios from "axios";
 
 const ItemsContext = createContext("");
 
-export default function ItemsProvider({ children }) {
+export default function ItemsProvider({ children } :any) {
     const [product, setProduct] = useState(null);
     const [error, setError] = useState(null);
 
@@ -17,7 +17,7 @@ export default function ItemsProvider({ children }) {
                     console.log(product);
                     
                 }
-            } catch (error) {
+            } catch (error:any) {
                 console.error("Error fetching data:", error.response ? error.response.data : error.message);
                 setError(error);
             }
@@ -25,10 +25,10 @@ export default function ItemsProvider({ children }) {
         fetchData();
     }, []);
     return (
-        <ItemsContext.Provider value={{ product, error }}>
+        <ItemsContext.Provider value={{ product , error }}>
             {children}
         </ItemsContext.Provider>
     );
 }
 
-export const useItemContext = () => useContext(ItemsContext);
+export const useItemContext = () => useContext(ItemsContext);   

@@ -34,10 +34,8 @@ const Ecommerce = () => {
      if (error) { return <div>Error fetching data: {error.message}</div>; }
      if (!product) { return <div>Loading...</div>; } 
       const CategoryHandle=(category:string)=>{
-        debugger
         setCategoryName(category);
         console.log(categoryName,category);
-        
        <ProductsPage value={category} />
       }
       return (
@@ -59,7 +57,7 @@ const Ecommerce = () => {
                     <div className="flex flex-wrap ">
                         {product.map((item) => {
                             return (
-                                <div className="w-1/3" onClick={()=>CategoryHandle(item.category_name)}>
+                                <div className="w-1/3" onClick={()=>CategoryHandle(item.category_name)} key={item.category_name}>
                                 <Homecard category={item.category_name} imagepath={item.products[0].image}  />
                                 </div>
                             )
@@ -75,41 +73,27 @@ const Ecommerce = () => {
                     <div className="w-full">
                         <div>
                         </div>
-                        {product.forEach(element => {
-                        <div className="w-full flex flex-wrap">  
-                            {element.products.map(e => {
+                        {product.map((element:any) => {                            
+                            return(
+                        <div className="w-full flex flex-wrap" >  
+                            {element.products.map(e => {                                
                                 return (
-                                    <ProductCard imagepath={e.image} title={e.title} price={e.price} description={e.description} width="w-1/4" />
+                                    <ProductCard  imagepath={e.image} title={e.title} price={e.price} description={e.description}  category={element.category_name} product_id={e.id} />
                                 )
                             })
                             }   
                         </div>
+                            )
                         })}    
                     </div>
                 </div>
                 <div className="container px-14">
-                    <div className="w-full ">
-                        <div className="flex justify-center items-center h-11 m-10 w-full text-center">
-                            <hr className="w-3/12 h-1 bg-black z-0 absolute"></hr>
-                            <h1 className="z-10 relative bg-white text-4xl	font-bold leading-loose	px-2">JUST ARRIVED</h1>
-                        </div>
-                        <div className="w-full">
-                            <div className="w-full flex flex-wrap ">
-                                {product.map(e => {
-                                    return (
-                                        <ProductCard imagepath={e.imagepath} title={e.producttitle} price={e.price} discount={e.discount} width="w-1/4" />
-                                    )
-                                })
-                                }
-                            </div>
-                        </div>
-                    </div>
                     <div className="w-full">
                         <div className=" flex flex-wrap">
                             {myArray.map(e => {
                                 if (e?.default.src.includes('vendor')) {
                                     return (
-                                        <VendorCard imagepath={e} />
+                                        <VendorCard imagepath={e} key={""}/>
                                     )
                                 }
                             })

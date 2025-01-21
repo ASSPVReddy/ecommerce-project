@@ -1,6 +1,4 @@
-import Image from "../../../../node_modules/next/image"
 import Link from "../../../../node_modules/next/link"
-import cat1 from "../../../../public/img/cat1.jpg"
 
 const Homecard = ({
     imagepath,

@@ -6,7 +6,6 @@ import Footer from "@/app/ReusableComponents/Footer/page"
 import Header from "@/app/ReusableComponents/Header/page"
 import PageNavbar from "@/app/ReusableComponents/PagesNavigation/page"
 import ProductCard from "@/app/ReusableComponents/ProductCard/page"
-import shopProducts from "../../../../public/servicefile/Products.json"
 
 const ShopPage = () => {
     const { product, error } = useItemContext();
@@ -59,14 +58,18 @@ const ShopPage = () => {
                             </div>
                         </div>
                     </div>
+                    {product.map(element =>{
+                        return(
                     <div className="flex flex-wrap">
-                        {product.map(e => {
+                        {element.map(e => {
                             return (
-                                <ProductCard imagepath={e.product.image} title={e.producttitle} price={e.price} discount={e.discount} width="w-1/3" />
+                                <ProductCard imagepath={e.product.image} title={e.producttitle} price={e.price} description={e.description} />
                             )
                         })
                         }
-                    </div>
+                    </div>  
+                        ) 
+                })}
                 </div>
             </div>
             <Footer />
